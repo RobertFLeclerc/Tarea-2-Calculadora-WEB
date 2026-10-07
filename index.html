@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora WEB</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="contenedor">
+    <section class="calculadora">
+      <div class="encabezado"><span class="titulo">CALCULADORA</span></div>
+      <div class="pantalla">
+        <div id="operacion" class="operacion"></div>
+        <div id="resultado" class="resultado">0</div>
+      </div>
+      <div class="botones">
+        <button class="btn btn-secundario" onclick="limpiarTodo()">AC</button>
+        <button class="btn btn-secundario" onclick="borrarUltimo()">⌫</button>
+        <button class="btn btn-operador" onclick="seleccionarOperacion('/')">÷</button>
+        <button class="btn btn-operador" onclick="seleccionarOperacion('*')">×</button>
+        <button class="btn" onclick="agregarNumero('7')">7</button><button class="btn" onclick="agregarNumero('8')">8</button><button class="btn" onclick="agregarNumero('9')">9</button><button class="btn btn-operador" onclick="seleccionarOperacion('-')">−</button>
+        <button class="btn" onclick="agregarNumero('4')">4</button><button class="btn" onclick="agregarNumero('5')">5</button><button class="btn" onclick="agregarNumero('6')">6</button><button class="btn btn-operador" onclick="seleccionarOperacion('+')">+</button>
+        <button class="btn" onclick="agregarNumero('1')">1</button><button class="btn" onclick="agregarNumero('2')">2</button><button class="btn" onclick="agregarNumero('3')">3</button><button class="btn btn-igual" onclick="calcular()">=</button>
+        <button class="btn btn-cero" onclick="agregarNumero('0')">0</button><button class="btn" onclick="agregarNumero('.')">.</button>
+      </div>
+    </section>
+    <section class="historial-contenedor">
+      <div class="historial-header">
+        <div><h2>Historial</h2><p>Operaciones realizadas</p></div>
+        <button class="btn-eliminar" onclick="eliminarHistorial()">Limpiar</button>
+      </div>
+      <div id="historial" class="historial"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
